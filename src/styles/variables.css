@@ -1,0 +1,78 @@
+:root {
+  /* Colors */
+  --white: #FFFFFF;
+  --cream: #FAF7F2;
+  --off-white: #F5F0E8;
+  --charcoal: #1A1A1A;
+  --deep-warm: #2D2B27;
+  --gold: #C9A96E;
+  --sage: #8FA68B;
+  --text-muted: #7A7570;
+
+  /* Semantic theme tokens (light is the default look) */
+  --bg: #FAF7F2;
+  --bg-alt: #F5F0E8;
+  --surface: #FFFFFF;
+  --text: #1A1A1A;
+  --border: rgba(26, 26, 26, 0.12);
+  --on-gold: #FFFFFF;
+  --footer-bg: #111111;
+  --shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+  color-scheme: light;
+
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition: 0.4s var(--ease-standard);
+
+  /* Spacing scale: 4px base unit */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-9: 36px;
+  --space-10: 40px;
+  --space-11: 44px;
+  --space-12: 48px;
+  --space-13: 52px;
+  --space-14: 56px;
+  --space-15: 60px;
+  --space-16: 64px;
+
+  /* Breakpoint system:
+     small phone up to 480px, phone up to 767px, tablet 768px to 1023px,
+     desktop 1024px and up, wide 1440px and up.
+     Fluid tokens below equal the classic desktop values at 1280px and wider
+     (clamp maximums), and shrink smoothly on smaller screens. */
+  --fs-hero: clamp(40px, 5.625vw, 72px);
+  --fs-tour: clamp(36px, 4.0625vw, 52px);
+  --fs-section: clamp(36px, 3.75vw, 48px);
+  --fs-cta: clamp(36px, 4.6875vw, 60px);
+  --fs-ba: clamp(36px, 4.375vw, 56px);
+  --pad-section: clamp(48px, 6.25vw, 80px);
+  --gutter: clamp(16px, 4.6875vw, 60px);
+  --gap-btns: clamp(16px, 3.75vw, 48px);
+}
+
+:root[data-theme="dark"] {
+  --gold: #D4B57D;
+  --text-muted: #A8A29A;
+  --bg: #141312;
+  --bg-alt: #1C1A18;
+  --surface: #242220;
+  --text: #F2EDE4;
+  --border: rgba(255, 255, 255, 0.12);
+  --on-gold: #1A1A1A;
+  --footer-bg: #111111;
+  --shadow: 0 2px 16px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  color-scheme: dark;
+}

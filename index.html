@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#FAF7F2" />
+    <script>
+      try {
+        var riTheme = localStorage.getItem('ri-theme');
+        document.documentElement.dataset.theme = (riTheme === 'dark' || riTheme === 'light') ? riTheme : 'light';
+        if (document.documentElement.dataset.theme === 'dark') {
+          var riMeta = document.querySelector('meta[name="theme-color"]');
+          if (riMeta) riMeta.setAttribute('content', '#141312');
+        }
+        var riLang = localStorage.getItem('ri-lang');
+        document.documentElement.lang = (riLang === 'hi' || riLang === 'en') ? riLang : 'en';
+        var riLogo = document.documentElement.dataset.theme === 'dark' ? '/logo/logo-on-dark-480.webp' : '/logo/logo-on-light-480.webp';
+        try {
+          var riPre = document.createElement('link');
+          riPre.rel = 'preload';
+          riPre.as = 'image';
+          riPre.href = riLogo;
+          document.head.appendChild(riPre);
+        } catch (e2) {}
+      } catch (e) {
+        document.documentElement.dataset.theme = 'light';
+        document.documentElement.lang = 'en';
+      }
+    </script>
+    <style>
+      html.loader-lock, html.loader-lock body { overflow: hidden; }
+      #loader { position: fixed; inset: 0; z-index: 1000; background: #FAF7F2; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; margin: 0; opacity: 1; }
+      :root[data-theme="dark"] #loader { background: #141312; }
+      #loader-logo { width: 160px; height: 201px; display: block; opacity: 0; }
+      #loader-logo.ready { opacity: 1; transition: opacity 400ms ease-out; }
+      #loader-bar-wrap { width: 220px; height: 2px; background: #F5F0E8; border-radius: 2px; overflow: hidden; }
+      :root[data-theme="dark"] #loader-bar-wrap { background: #1C1A18; }
+      #loader-bar { width: 100%; height: 100%; background: #C9A96E; transform: scaleX(0); transform-origin: left; transition: transform 250ms linear; }
+      #loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 500ms ease, visibility 0s 500ms; }
+      #loader.fading { will-change: opacity; }
+      @media (prefers-reduced-motion: reduce) {
+        #loader-logo.ready, #loader.hidden, #loader-bar { transition: none; }
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Inter:wght@400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600&family=Noto+Serif+Devanagari:wght@400;600&display=swap">
+    <title data-i18n="meta.title">Rana Interiors | POP, PVC and Interior Work in Dewas</title>
+  </head>
+  <body>
+    <div id="loader" aria-hidden="true">
+      <img id="loader-logo" width="160" height="201" alt="" decoding="sync" loading="eager" fetchpriority="high" />
+      <div id="loader-bar-wrap"><div id="loader-bar"></div></div>
+    </div>
+    <script>
+      try {
+        var riT = document.documentElement.dataset.theme || 'light';
+        var riL = document.getElementById('loader-logo');
+        if (riL) {
+          riL.src = riT === 'dark' ? '/logo/logo-on-dark-480.webp' : '/logo/logo-on-light-480.webp';
+          riL.setAttribute('srcset', riT === 'dark' ? '/logo/logo-on-dark-240.webp 240w, /logo/logo-on-dark-480.webp 480w, /logo/logo-on-dark-960.webp 960w' : '/logo/logo-on-light-240.webp 240w, /logo/logo-on-light-480.webp 480w, /logo/logo-on-light-960.webp 960w');
+          riL.setAttribute('sizes', '160px');
+        }
+      } catch (e3) {}
+    </script>
+
+    <nav id="site-nav">
+      <a class="logo" href="#hero" aria-label="Rana Interiors, home"><img class="nav-logo nav-logo-dark" src="/logo/logo-on-dark-240.webp" srcset="/logo/logo-on-dark-240.webp 240w, /logo/logo-on-dark-480.webp 480w, /logo/logo-on-dark-960.webp 960w" sizes="32px" alt="" width="240" height="302" decoding="async" loading="lazy" /><img class="nav-logo nav-logo-light" src="/logo/logo-on-light-240.webp" srcset="/logo/logo-on-light-240.webp 240w, /logo/logo-on-light-480.webp 480w, /logo/logo-on-light-960.webp 960w" sizes="32px" alt="" width="240" height="302" decoding="async" loading="eager" fetchpriority="high" /></a>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="#portfolio" data-i18n="nav.work">Work</a></li>
+          <li><a href="#services" data-i18n="nav.services">Services</a></li>
+          <li><a href="#process" data-i18n="nav.process">Process</a></li>
+          <li><a href="#cta" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        <a class="btn-book" data-i18n="nav.book" href="https://wa.me/917999060809?text=Hi%20Rana%20Interiors%2C%20I%20want%20to%20enquire%20about%20interior%20work">Book a Call</a>
+        <div class="nav-controls" id="nav-controls">
+          <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="Switch to dark mode"><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5" /><line x1="12" y1="1" x2="12" y2="3" /><line x1="12" y1="21" x2="12" y2="23" /><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" /><line x1="1" y1="12" x2="3" y2="12" /><line x1="21" y1="12" x2="23" y2="12" /><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" /></svg></button>
+          <button type="button" id="lang-toggle" class="lang-toggle" aria-label="Switch to Hindi"><span class="lang-label" lang="hi">हिंदी</span></button>
+        </div>
+      </div>
+      <button type="button" id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" data-i18n-aria-label="nav.openMenu" aria-label="Open menu"><span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span></button>
+      <div id="mobile-menu" class="mobile-menu" hidden>
+        <ul class="mobile-links">
+          <li><a href="#portfolio" data-i18n="nav.work">Work</a></li>
+          <li><a href="#services" data-i18n="nav.services">Services</a></li>
+          <li><a href="#process" data-i18n="nav.process">Process</a></li>
+          <li><a href="#cta" data-i18n="nav.contact">Contact</a></li>
+          <!-- Slot: the "Find Your Dream Design" link will be added here later -->
+        </ul>
+        <a class="btn-book mobile-book" data-i18n="nav.book" href="https://wa.me/917999060809?text=Hi%20Rana%20Interiors%2C%20I%20want%20to%20enquire%20about%20interior%20work">Book a Call</a>
+        <div id="menu-toggles-slot" class="menu-toggles-slot"></div>
+      </div>
+    </nav>
+
+    <section id="hero"></section>
+    <section id="trust-bar"></section>
+    <section id="before-after"></section>
+    <section id="services"></section>
+    <section id="interior-tour"></section>
+    <section id="portfolio"></section>
+    <section id="process"></section>
+    <section id="testimonials"></section>
+    <section id="marquee"></section>
+    <section id="cta"></section>
+    <section id="footer"></section>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

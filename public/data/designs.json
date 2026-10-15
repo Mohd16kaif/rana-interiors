@@ -1,0 +1,19 @@
+{
+  "updated": "2026-10-15T00:00:00.000Z",
+  "cloud": "hygptczv",
+  "_temp": true,
+  "items": [
+    { "id": "test-1", "v": 1000000012, "w": 1600, "h": 2000, "type": "pop", "space": "home", "room": "living-room", "source": "ours" },
+    { "id": "test-2", "v": 1000000011, "w": 1600, "h": 2000, "type": "wardrobe", "space": "home", "room": "bedroom", "source": "ours" },
+    { "id": "test-3", "v": 1000000010, "w": 1600, "h": 2000, "type": "kitchen", "space": "home", "room": "kitchen", "source": "ours" },
+    { "id": "test-4", "v": 1000000009, "w": 1600, "h": 2000, "type": "tv-unit", "space": "home", "room": "living-room", "source": "ours" },
+    { "id": "test-5", "v": 1000000008, "w": 1600, "h": 2000, "type": "pvc-panel", "space": "home", "room": "living-room", "source": "pexels" },
+    { "id": "test-6", "v": 1000000007, "w": 1600, "h": 2000, "type": "false-ceiling", "space": "home", "room": "bedroom", "source": "pexels" },
+    { "id": "test-7", "v": 1000000006, "w": 1600, "h": 2000, "type": "wall-panel", "space": "office", "room": "cabin", "source": "pexels" },
+    { "id": "test-8", "v": 1000000005, "w": 1600, "h": 2000, "type": "wardrobe", "space": "home", "room": "bedroom", "source": "pexels" },
+    { "id": "test-9", "v": 1000000004, "w": 1600, "h": 2000, "type": "kitchen", "space": "home", "room": "kitchen", "source": "pexels" },
+    { "id": "test-10", "v": 1000000003, "w": 1600, "h": 2000, "type": "tv-unit", "space": "shop", "room": "showroom", "source": "pexels" },
+    { "id": "test-11", "v": 1000000002, "w": 1600, "h": 2000, "type": "pop", "space": "office", "room": "reception", "source": "pexels" },
+    { "id": "test-12", "v": 1000000001, "w": 1600, "h": 2000, "type": "full-interior", "space": "home", "room": "dining", "source": "pexels" }
+  ]
+}

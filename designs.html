@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#FAF7F2" />
+    <script>
+      try {
+        var riTheme = localStorage.getItem('ri-theme');
+        document.documentElement.dataset.theme = (riTheme === 'dark' || riTheme === 'light') ? riTheme : 'light';
+        if (document.documentElement.dataset.theme === 'dark') {
+          var riMeta = document.querySelector('meta[name="theme-color"]');
+          if (riMeta) riMeta.setAttribute('content', '#141312');
+        }
+        var riLang = localStorage.getItem('ri-lang');
+        document.documentElement.lang = (riLang === 'hi' || riLang === 'en') ? riLang : 'en';
+      } catch (e) {
+        document.documentElement.dataset.theme = 'light';
+        document.documentElement.lang = 'en';
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Inter:wght@400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600&family=Noto+Serif+Devanagari:wght@400;600&display=swap">
+    <title data-i18n="designs.meta.title">Designs | Rana Interiors Dewas</title>
+  </head>
+  <body>
+    <nav id="site-nav" class="scrolled">
+      <a class="logo" href="/" aria-label="Rana Interiors, home"><img class="nav-logo nav-logo-dark" src="/logo/logo-on-dark-240.webp" srcset="/logo/logo-on-dark-240.webp 240w, /logo/logo-on-dark-480.webp 480w, /logo/logo-on-dark-960.webp 960w" sizes="32px" alt="" width="240" height="302" decoding="async" loading="lazy" /><img class="nav-logo nav-logo-light" src="/logo/logo-on-light-240.webp" srcset="/logo/logo-on-light-240.webp 240w, /logo/logo-on-light-480.webp 480w, /logo/logo-on-light-960.webp 960w" sizes="32px" alt="" width="240" height="302" decoding="async" loading="eager" fetchpriority="high" /></a>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="/#portfolio" data-i18n="nav.work">Work</a></li>
+          <li><a href="/#services" data-i18n="nav.services">Services</a></li>
+          <li><a href="/#process" data-i18n="nav.process">Process</a></li>
+          <li><a href="/#cta" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        <a class="btn-book" data-i18n="nav.book" href="https://wa.me/917999060809?text=Hi%20Rana%20Interiors%2C%20I%20want%20to%20enquire%20about%20interior%20work">Book a Call</a>
+        <div class="nav-controls" id="nav-controls">
+          <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="Switch to dark mode"><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5" /><line x1="12" y1="1" x2="12" y2="3" /><line x1="12" y1="21" x2="12" y2="23" /><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" /><line x1="1" y1="12" x2="3" y2="12" /><line x1="21" y1="12" x2="23" y2="12" /><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" /></svg></button>
+          <button type="button" id="lang-toggle" class="lang-toggle" aria-label="Switch to Hindi"><span class="lang-label" lang="hi">हिंदी</span></button>
+        </div>
+      </div>
+      <button type="button" id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" data-i18n-aria-label="nav.openMenu" aria-label="Open menu"><span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span></button>
+      <div id="mobile-menu" class="mobile-menu" hidden>
+        <ul class="mobile-links">
+          <li><a href="/#portfolio" data-i18n="nav.work">Work</a></li>
+          <li><a href="/#services" data-i18n="nav.services">Services</a></li>
+          <li><a href="/#process" data-i18n="nav.process">Process</a></li>
+          <li><a href="/#cta" data-i18n="nav.contact">Contact</a></li>
+          <!-- Slot: the "Find Your Dream Design" link will be added here later -->
+        </ul>
+        <a class="btn-book mobile-book" data-i18n="nav.book" href="https://wa.me/917999060809?text=Hi%20Rana%20Interiors%2C%20I%20want%20to%20enquire%20about%20interior%20work">Book a Call</a>
+        <div id="menu-toggles-slot" class="menu-toggles-slot"></div>
+      </div>
+    </nav>
+
+    <main id="designs-page">
+      <header class="designs-head">
+        <h1 class="designs-title" data-i18n="designs.title">Find Your Dream Design</h1>
+        <p class="designs-sub" data-i18n="designs.sub">Browse POP, PVC and interior ideas for your home, office or shop.</p>
+      </header>
+
+      <div class="designs-toolbar">
+        <input id="designs-search" class="designs-search" type="search" autocomplete="off" placeholder="Search PVC, POP, kitchen..." />
+        <button type="button" id="filters-toggle" class="designs-filters-btn" aria-expanded="false" aria-controls="designs-filters"><span data-i18n="designs.filters">Filters</span><span id="filters-count"></span></button>
+      </div>
+
+      <div class="designs-layout">
+        <aside id="designs-filters" class="designs-filters" aria-label="Filters">
+          <div class="filter-group">
+            <h2 class="filter-label" data-i18n="designs.show">Show</h2>
+            <div class="seg" role="group" aria-label="Show">
+              <button type="button" class="seg-btn" data-show="all" data-i18n="designs.all">All</button>
+              <button type="button" class="seg-btn" data-show="ours" data-i18n="designs.ours">Our Work</button>
+              <button type="button" class="seg-btn" data-show="ideas" data-i18n="designs.ideas">Design Ideas</button>
+            </div>
+          </div>
+          <div class="filter-group">
+            <h2 class="filter-label" data-i18n="designs.type">Type</h2>
+            <div id="type-chips" class="chips"></div>
+          </div>
+          <div class="filter-group">
+            <h2 class="filter-label" data-i18n="designs.space">Space</h2>
+            <select id="space-select" class="designs-select"></select>
+          </div>
+          <div class="filter-group">
+            <h2 class="filter-label" data-i18n="designs.room">Room</h2>
+            <select id="room-select" class="designs-select"></select>
+          </div>
+        </aside>
+
+        <section class="designs-results" aria-label="Results">
+          <div class="designs-meta">
+            <p id="designs-count" aria-live="polite"></p>
+            <button type="button" id="designs-clear" class="designs-clear" data-i18n="designs.clear" hidden>Clear all</button>
+          </div>
+          <div id="designs-grid" class="designs-grid"></div>
+          <div id="designs-empty" class="designs-empty" hidden>
+            <p class="designs-empty-title" data-i18n="designs.empty">No designs found</p>
+            <p class="designs-empty-sub" data-i18n="designs.emptySub">Try a different search or clear the filters.</p>
+          </div>
+          <div id="designs-sentinel" class="designs-sentinel" aria-hidden="true"></div>
+          <button type="button" id="designs-more" class="designs-more" data-i18n="designs.more" hidden>Load more</button>
+        </section>
+      </div>
+    </main>
+
+    <section id="footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <p class="footer-tagline" data-i18n="footer.tagline">POP, PVC and Interior Work in Dewas</p>
+          <p class="footer-line"><a class="footer-phone" href="tel:+917999060809">+91 79990 60809</a></p>
+          <a class="footer-wa" href="https://wa.me/917999060809" target="_blank" rel="noopener"><span data-i18n="footer.chat">Chat on WhatsApp</span></a>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <p class="footer-copy">Rana Interiors. <span data-i18n="footer.rights">All rights reserved.</span></p>
+      </div>
+    </section>
+
+    <script type="module" src="/src/designs/main.js"></script>
+  </body>
+</html>

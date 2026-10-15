@@ -1,0 +1,154 @@
+{
+  "types": [
+    {
+      "id": "pop",
+      "en": "POP Ceiling",
+      "hi": "POP सीलिंग",
+      "keywords": { "en": ["ceiling", "pop ceiling", "false ceiling design", "living room ceiling"], "hi": ["छत", "पीओपी", "सीलिंग डिजाइन"] }
+    },
+    {
+      "id": "false-ceiling",
+      "en": "False Ceiling",
+      "hi": "फॉल्स सीलिंग",
+      "keywords": { "en": ["ceiling", "false ceiling", "gypsum ceiling", "cove light"], "hi": ["छत", "फॉल्स सीलिंग", "जिप्सम"] }
+    },
+    {
+      "id": "pvc-panel",
+      "en": "PVC Panels",
+      "hi": "PVC पैनल",
+      "keywords": { "en": ["pvc panel", "wall cladding", "ceiling panel"], "hi": ["पीवीसी", "पैनल", "दीवार"] }
+    },
+    {
+      "id": "wall-panel",
+      "en": "Wall Panels",
+      "hi": "वॉल पैनल",
+      "keywords": { "en": ["wall", "wall panel", "louvers", "tv wall"], "hi": ["दीवार", "वॉल पैनल", "लूवर्स"] }
+    },
+    {
+      "id": "tv-unit",
+      "en": "TV Unit",
+      "hi": "टीवी यूनिट",
+      "keywords": { "en": ["tv wall", "tv unit", "tv cabinet", "living room"], "hi": ["टीवी", "टीवी यूनिट", "दीवार"] }
+    },
+    {
+      "id": "wardrobe",
+      "en": "Wardrobe",
+      "hi": "वॉर्डरोब",
+      "keywords": { "en": ["wardrobe", "cupboard", "closet", "sliding wardrobe"], "hi": ["अलमारी", "वॉर्डरोब", "कपबोर्ड"] }
+    },
+    {
+      "id": "kitchen",
+      "en": "Modular Kitchen",
+      "hi": "मॉड्यूलर किचन",
+      "keywords": { "en": ["kitchen", "cabinet", "modular kitchen", "cupboard"], "hi": ["रसोई", "किचन", "मॉड्यूलर"] }
+    },
+    {
+      "id": "full-interior",
+      "en": "Full Interior",
+      "hi": "पूरा इंटीरियर",
+      "keywords": { "en": ["interior", "full home", "living room", "bedroom"], "hi": ["इंटीरियर", "पूरा घर", "घर"] }
+    }
+  ],
+  "spaces": [
+    {
+      "id": "home",
+      "en": "Home",
+      "hi": "घर",
+      "keywords": { "en": ["home", "house", "flat", "residential"], "hi": ["घर", "मकान", "फ्लैट"] }
+    },
+    {
+      "id": "office",
+      "en": "Office",
+      "hi": "ऑफिस",
+      "keywords": { "en": ["office", "workplace", "cabin"], "hi": ["ऑफिस", "कार्यालय"] }
+    },
+    {
+      "id": "shop",
+      "en": "Shop",
+      "hi": "दुकान",
+      "keywords": { "en": ["shop", "store", "showroom", "retail"], "hi": ["दुकान", "शोरूम", "स्टोर"] }
+    }
+  ],
+  "rooms": [
+    {
+      "id": "living-room",
+      "en": "Living Room",
+      "hi": "लिविंग रूम",
+      "keywords": { "en": ["living room", "sofa", "tv wall"], "hi": ["लिविंग रूम", "बैठक"] }
+    },
+    {
+      "id": "bedroom",
+      "en": "Bedroom",
+      "hi": "बेडरूम",
+      "keywords": { "en": ["bedroom", "bed", "wardrobe"], "hi": ["बेडरूम", "सोने का कमरा"] }
+    },
+    {
+      "id": "kitchen",
+      "en": "Kitchen",
+      "hi": "किचन",
+      "keywords": { "en": ["kitchen", "cabinet", "cooking"], "hi": ["रसोई", "किचन"] }
+    },
+    {
+      "id": "dining",
+      "en": "Dining",
+      "hi": "डाइनिंग",
+      "keywords": { "en": ["dining", "dining table", "kitchen"], "hi": ["डाइनिंग", "खाने का कमरा"] }
+    },
+    {
+      "id": "kids-room",
+      "en": "Kids Room",
+      "hi": "बच्चों का कमरा",
+      "keywords": { "en": ["kids room", "children bedroom", "bunk bed"], "hi": ["बच्चों का कमरा", "बच्चे"] }
+    },
+    {
+      "id": "bathroom",
+      "en": "Bathroom",
+      "hi": "बाथरूम",
+      "keywords": { "en": ["bathroom", "toilet", "vanity"], "hi": ["बाथरूम", "स्नानघर"] }
+    },
+    {
+      "id": "hall",
+      "en": "Hall",
+      "hi": "हॉल",
+      "keywords": { "en": ["hall", "corridor", "entrance"], "hi": ["हॉल", "गलियारा"] }
+    },
+    {
+      "id": "reception",
+      "en": "Reception",
+      "hi": "रिसेप्शन",
+      "keywords": { "en": ["reception", "lobby", "office"], "hi": ["रिसेप्शन", "स्वागत"] }
+    },
+    {
+      "id": "cabin",
+      "en": "Cabin",
+      "hi": "केबिन",
+      "keywords": { "en": ["cabin", "office cabin", "desk"], "hi": ["केबिन", "ऑफिस"] }
+    },
+    {
+      "id": "showroom",
+      "en": "Showroom",
+      "hi": "शोरूम",
+      "keywords": { "en": ["showroom", "shop", "display", "retail"], "hi": ["शोरूम", "दुकान"] }
+    }
+  ],
+  "sources": [
+    {
+      "id": "ours",
+      "en": "Our Work",
+      "hi": "हमारा काम",
+      "keywords": { "en": ["our work", "rana interiors", "real project"], "hi": ["हमारा काम", "असली काम"] }
+    },
+    {
+      "id": "pexels",
+      "en": "Design Idea",
+      "hi": "डिज़ाइन आइडिया",
+      "keywords": { "en": ["design idea", "inspiration", "reference"], "hi": ["डिजाइन", "आइडिया"] }
+    },
+    {
+      "id": "unsplash",
+      "en": "Design Idea",
+      "hi": "डिज़ाइन आइडिया",
+      "keywords": { "en": ["design idea", "inspiration", "reference"], "hi": ["डिजाइन", "आइडिया"] }
+    }
+  ]
+}
